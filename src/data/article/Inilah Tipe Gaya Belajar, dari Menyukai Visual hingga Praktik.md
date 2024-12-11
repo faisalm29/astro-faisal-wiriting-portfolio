@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: false
 title: "Inilah Tipe Gaya Belajar, dari Menyukai Visual hingga Praktik"
 source: "https://docheck.id/inilah-tipe-gaya-belajar-dari-menyukai-visual-hingga-praktik/"
-publishedDate: 2022-03-09
+publishedDate: "2022-03-09"
 description: "Dalam model VARK, terdapat 4 tipe gaya belajar. Macam macam gaya belajar memiliki cara belajar terbaik. Mana yang cocok untuk kamu?"
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"

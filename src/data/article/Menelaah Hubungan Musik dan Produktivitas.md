@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: true
 title: "Menelaah Hubungan Musik dan Produktivitas"
 source: "https://docheck.id/musik-dan-produktivitas-apa-hubungannya/"
-publishedDate: 2022-03-11
+publishedDate: "2022-03-11"
 description: "Bekerja sambil mendengarkan musik dapat meningkatkan produktivitas kerja. Apa hubungan sebenarnya, mari kita telaah bersama!"
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"

@@ -1,0 +1,54 @@
+---
+import { getCollection } from "astro:content";
+import type { PaginateFunction } from "astro";
+import Search from "@components/Search.astro";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const posts = await getCollection("blog", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+
+  const postsSortedByDate = posts.sort((a,b) => Date.parse(b.data.publishedDate) - Date.parse(a.data.publishedDate))
+
+  const postPages = [...postsSortedByDate];
+
+  return paginate(postPages, {
+    pageSize: 2,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<h1>Page {page.currentPage}</h1>
+<ul>
+  <!--List the array of astronaut info-->
+  {
+    page.data.map((post) => (
+      <li>
+        <a href={`/work/article/${post.id}`}>{post.data.title}</a>
+        <ul>
+          {post.data.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+      </li>
+      <time>{new Date(post.data.publishedDate).toLocaleDateString("en-US", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+      })}</time>
+    ))
+  }
+</ul>
+
+{page.url.first ? <a href={page.url.first}>First</a> : null}
+{page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+{page.url.next ? <a href={page.url.next}>Next</a> : null}
+{page.url.last ? <a href={page.url.last}>Last</a> : null}
+
+<Search />

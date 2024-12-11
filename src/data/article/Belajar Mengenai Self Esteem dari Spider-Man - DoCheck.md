@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: false
 title: "Belajar Mengenai Self Esteem dari Spider-Man - DoCheck"
 source: "https://docheck.id/belajar-mengenai-self-esteem-dari-spider-man/"
-publishedDate: 2022-08-31
+publishedDate: "2022-08-31"
 description: "Jika kamu memiliki low self esteem, percayalah kamu tidak sendiri. Dan bagaimana cara mencegahnya? yuk simak cara tokoh spiderman mencegahnya"
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"

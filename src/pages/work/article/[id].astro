@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from "astro:content";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
+  return posts.map((post) => ({
+    params: {
+      id: post.id,
+    },
+    props: {
+      post,
+    },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{`${post.data.title} | Faisal Muhammad`}</title>
+  </head>
+  <body data-pagefind-body>
+    <article>
+      <h1>{post.data.title}</h1>
+      <Image
+        src={post.data.thumbnail}
+        alt={`${post.data.title} thumbnail`}
+        width="400"
+        height="200"
+      />
+      <Content />
+    </article>
+  </body>
+</html>

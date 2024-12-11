@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: false
 title: "Memperlancar Public Speaking dengan To-do List ala Kylatif"
 source: "https://docheck.id/memperlancar-public-speaking-dengan-to-do-list-ala-kylatif/"
-publishedDate: "2022-03-08T12:30:00+00:00"
+publishedDate: "2022-03-08"
 description: "Public speaking adalah skill yang cukup sulit untuk dikuasai. Kylatif memberikan beberapa tips public speaking yang meningkatkan skill kamu."
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"

@@ -4,24 +4,27 @@ import { glob } from "astro/loaders";
 const blog = defineCollection({
   loader: glob({
     pattern: ["**/*.md", "**/*.mdx"],
-    base: "./src/data/blog",
+    base: "./src/data/article",
   }),
-  schema: z.object({
-    title: z.string(),
-    source: z.string(),
-    publishedDate: z.coerce.date(),
-    description: z.string(),
-    tags: z.array(
-      z.enum([
-        "Article",
-        "Press Release",
-        "Social Media Content",
-        "Campaign",
-        "DoCheck",
-        "Insan Bumi Mandiri",
-      ])
-    ),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      draft: z.boolean(),
+      title: z.string(),
+      source: z.string(),
+      publishedDate: z.string(),
+      description: z.string(),
+      thumbnail: image(),
+      tags: z.array(
+        z.enum([
+          "Article",
+          "Press Release",
+          "Social Media Content",
+          "Campaign",
+          "DoCheck",
+          "Insan Bumi Mandiri",
+        ])
+      ),
+    }),
 });
 
 export const collections = { blog };

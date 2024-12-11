@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: true
 title: "Pengertian dan Cara Mengatasi Prokrastinasi yang Bisa Kamu Coba - DoCheck"
 source: "https://docheck.id/prokrastinasi-apa-penyebab-dan-cara-untuk-menghindarinya/"
-publishedDate: 2023-01-03
+publishedDate: "2023-01-03"
 description: "Prokrastinasi adalah menunda-nunda pekerjaan karena suasana hati yang buruk. Beberapa hal ini bisa kamu lakukan untuk mengatasinya!"
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"

@@ -1,9 +1,10 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+draft: false
 title: "Hobi Memasak? Harus Pakai Aplikasi DoCheck!"
 source: "https://docheck.id/hobi-memasak-aplikasi-docheck-bisa-bantu-catat-resep/"
-publishedDate: 2022-03-11
+publishedDate: "2022-03-11"
 description: "Kalau kamu hobi memasak, pasti sering mencatat resep, kan? Kamu mencatatnya di mana? Biar gak repot, mending pakai DoCheck. Begini caranya!"
+thumbnail: "https://blog.insanbumimandiri.org/wp-content/uploads/2023/07/kurban-somalia.jpg"
 tags:
   - "Article"
   - "DoCheck"
